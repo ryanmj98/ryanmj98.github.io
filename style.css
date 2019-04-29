@@ -1,0 +1,264 @@
+body {
+    background: lightblue;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 10vh 5vh 75vh 10vh;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-between;
+}
+
+.header {
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 3em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nav {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 1em;
+}
+
+.nav li {
+    display: inline-block;
+    list-style-position: inside;
+    text-align: center;
+}
+
+.nav li a {
+    text-decoration: none;
+    padding: 1em;
+    font-style: bold;
+    font-size: 20px;
+    color: black;
+}
+
+li a:hover {
+    color: white;
+    border-bottom: 2px solid grey;
+    transition: color .08s ease-in;
+}
+
+.tennisGirl {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.tennisGirl img {
+    max-width: 100%;
+    height: 100%;;
+}
+
+.about {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: start;
+    align-self: center;
+}
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.footer img {
+    border-radius: 25%;
+    height: 100%;
+}
+
+.forum {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+
+.calendar {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+
+/* Chat containers */
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+    float: left;
+    color: #999;
+}
+
+.container img {
+    height: 15px;
+    width: 15px;
+}
+
+.photos {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+
+.photos img {
+    width: 15%;
+    height: 10%;
+}
+
+.join {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+
+@media only screen and (max-width: 900px) {
+body {
+    background-color: lightblue;
+}
+
+.tennisGirl {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.tennisGirl img {
+    opacity: 0;
+}
+
+.about {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 1em;
+}
+
+.nav li {
+    display: inline-block;
+    list-style-position: inside;
+    text-align: center;
+}
+
+.nav li a {
+    text-decoration: none;
+    padding: 1em;
+    font-style: bold;
+    font-size: 20px;
+    color: black;
+}
+
+li a:hover {
+    color: white;
+    border-bottom: 2px solid grey;
+    transition: color .08s ease-in;
+}
+
+.calendar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-self: center;
+    justify-self: center;
+}
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .header {
+        font-size: 1.5em;
+    }
+
+    .nav ul li {
+        display: block;
+    }
+
+    .nav ul li a:hover {
+        border-bottom: none;
+    }
+
+    .grid-container {
+        grid-template-rows: 2vh 23vh 65vh 5vh;
+    }    
+}
